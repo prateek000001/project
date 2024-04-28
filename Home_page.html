@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html> 
+	<head>
+		<title>Fact and Curious-A Quiz Hub</title>
+		<link rel="stylesheet" href="Home_page.css">
+		<script>
+		function myFunction() {
+		var x = document.getElementById("form");
+		if (x.style.display === "none") {
+		x.style.display = "block";
+		} else {
+		x.style.display = "none";
+		}
+		}
+		
+		function myFunction1() {
+		var x = document.getElementById("form1");
+		if (x.style.display === "none") {
+		x.style.display = "block";
+		} else {
+		x.style.display = "none";
+		}
+		}
+		
+		function validate(){
+			var x=document.getElementById("password1").value;
+			var y=document.getElementById("cpassword").value;
+			if(x==y)
+			return true;
+			else{
+			alert("password should match");
+			return false;}
+		}
+		function setCookie()
+		{
+			const value=document.getElementById("email").value;
+			var name="username";
+			var expDays="30";
+        let date = new Date();
+        date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + "; " + expires + "; path=/";
+		}
+		</script>
+	</head>
+<body>
+	<section class="header">
+	<nav>
+		<ul>
+			<li><div class="nav"><a href="#" >Home</a></div>
+			<li><div class="nav"><a href="#about" >About us</a></div>
+			<li><div class="nav"><a href="#support" >Support</a></div>
+			<li><div class="nav"><a href="#contact" >Contact us</a></div>
+	</nav>
+	
+	<div class="text-box">
+		<h1>Fact and Curious-A Quiz Hub</h1>
+		
+	<!--	<a href="" class="btn" >Visit us</a>-->
+		<button onclick="myFunction()" class="btn">Play Now</button>
+		<!----------------------------------->
+		
+		<div class="form" id="form" style="display:none">
+		<h2>Login! It's free</h2>
+		<form action="Student_login.php">
+		<input class="input" type="email" name="email" id="email"placeholder="Enter email here" required>
+		<input class="input" type="password" name="password" id="password" placeholder="Enter password here" required>
+		<!--<button class="button"> <a href="Student_login.php">Login</a></button>-->
+		<input type="submit" class="button" value="Login" onclick="setCookie()"></form>
+		
+		<p class="link">Don't have an account?<br>
+		<button onclick="myFunction1()" class="signupbtn"><a>Sign up here</a></p></button>
+		<p class="liw">Log in with</p>
+		
+		<div class="icons">
+			<a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-google"></ion-icon></a>
+			<a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+		</div>
+	</div>
+		
+		<!----------------------------------->
+		
+		<div class="form1" id="form1" style="display:none">
+		<h2>Sign-up here</h2>
+		<form action="Student_signup.php" onsubmit="return validate()">
+		<input type="email" class="input" name="email1" id="email1" placeholder="Enter email here" required>
+		<input type="password" class="input" name="password1" id="password1" placeholder="Enter password here" required>
+		<input type="password" class="input" name="cpassword" id="cpassword" placeholder="Confirm Password">
+		<!--<button class="button"> <a href="#">Sign-up</a></button>-->
+		<input type="submit" class="button" value="Sign-up"></form>
+		
+	</div>
+		
+		<!------------------------------------>
+		
+	</div>	
+	
+	</section>
+	
+	<section class="website">
+		<h1>Our Website</h1>
+		<div class="row">
+		
+		</div>
+	</section>
+	
+	
+	<section class="about" id="about">
+		<div class="about_us">
+			<h1>About</h1>
+			Welcome to one of the greatest online mind sport in the galaxy!<br>
+			wohoo! Fact and Curious is available on every modern browser.<br>
+
+
+			Giving players the chance to add silver feathers of knowledge to their crowns.<br>
+			Beguiling millions of players and we tend to reach out to even more geeks.<br>
+			Battle out and look where your mind stands.<br>
+			Test yourself now and climb up the ladder to improvement with us.<br>
+			So, What are you waiting for?<br>
+			If it doesn't challenge you <br>
+			it won't change you<br>
+
+			Get started- It's free
+		</div>
+	</section>
+	
+	
+	<section class="support_" id="support">
+		<div class="support">
+			<h1>Support</h1>
+			Got a query? not satisfied with an answer or its justification?<br>
+			Dont worry<br>
+			we would love to hear and answer you!<br>
+			factandcurious@gmail.com
+		</div>
+	</section>
+	
+	
+	<section class="contact_us" id="contact">
+		<div class="contact">
+			<h1>Contact Us</h1>
+			Have an idea? Tell us<br>
+			we whole-heartedly welcome feedbacks and any opportunity to improve.<br>
+			You can even become a part of us and our ameliorate journey.<br>
+			joinfactandcurious@gmail.com
+		</div>
+	</section>
+	
+	
+	<script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+	
+</body>
+</html>

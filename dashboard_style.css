@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Codystar:300&display=swap');
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image:url("dashboard.jpeg");
+   background-size:100%;
+}
+
+.neons {
+   
+   text-align: center;
+}
+
+.neons h1 {
+  font-size:6rem;
+  text-align: center;
+   font-weight: bolder;
+  -webkit-animation: glow 2s ease-in-out infinite alternate;
+  -moz-animation: glow 2s ease-in-out infinite alternate;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+     from {
+      color: #fff;
+    text-shadow: 0 0 10px #00fff2, 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 90px #00fff2;
+  }
+  
+  to {
+     color: gray;
+    text-shadow: 0 0 20px #00fff2, 0 0 30px #00fff2, 0 0 40px #00fff2, 0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2, 0 1 90px #00fff2;
+  }
+}
+
+
+.container{
+	color:white;
+	font-size:35px;
+	text-align:center;
+}
+.username{
+	color:salmon;
+	font-size:55px;
+}
+.levelleft{
+	text-shadow:2px 2px 5px white;
+	float:center;
+	color:teal;
+	font-weight:bold;
+	font-size: 45px;
+	font-family:"Lucida Handwriting";
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	background: #6dd6d1;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0px 10px 25px #57aba7, 0px -10px 25px #a6fffa, inset 0px -5px 10px #57aba7, inset 0px 5px 10px #a6fffa;
+	font-family: 'Damion', cursive;
+	color: white;
+	font-size: 20px;
+	transition: 500ms;
+}
+
+button:hover {
+		border: 2px solid #6dd6d1;
+	animation: hueRotation 2s linear infinite;
+}
+
+@keyframes hueRotation {
+	to {filter: hue-rotate(360deg);}
+}
+
+button:focus {
+	outline: none;
+}
+section{
+	width:100%;
+}
+.box{
+	margin-top:300px;
+	font-size:24px;
+	position:absolute;
+	top:50%;
+	left:45%;
+	transform:translate(-50%,-50%);
+	width:1000px;
+	height:300px;
+	background:transparent;
+	border-bottom:2px solid black;
+	border-left:2px solid black;
+	display:flex;
+}
+.box .skill{
+	position:relative;
+	flex:1;
+	text-align:center;
+}
+.box .skill .graph{
+	position:absolute;
+	width:40px;
+	background:rgba(0,0,0,1);
+	bottom:0;
+	left:50%;
+	transform:translateX(-50%,-50%);
+	box-shadow: 3px 3px 1px grey;
+
+}
+.box .skill .graph:before{
+	content:'';
+	position:absolute;
+	top:2px;
+	left:2px;
+	right:2px;
+	bottom:0;
+	background:palevioletred;
+}
+.box .skill .graph:after{
+	content:'';
+	position:absolute;
+	top:0;
+	left:0;
+	width:50%;
+	height:100%;
+	background:rgba(255,255,255,.1);
+	
+}
+.box .skill .graph .score{
+	position:absolute;
+	top:-20px;
+	left:0;
+	transform:translateX(-50%);
+	text-align:center;
+	color:white;
+	font-weight:bold;
+}
+.box .skill .name{
+	position:absolute;
+	bottom:-40px;
+	left:65%;
+	transform:translate(-50%);
+	text-align:center;
+	color:indigo;
+	background:lavenderblush;
+	padding:2px 6px;
+	border-radius:4px;
+	font-size:20px;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.levelleft table{
+	margin-top:20px;
+	width:100%;
+	border:2px solid black;
+	border-collapse:collapse;
+	font-size:24px;
+	color:white;
+	background-image:url("https://i.pinimg.com/474x/9d/8a/8c/9d8a8c0c911a0bac72a0db5a7fc00fed.jpg");
+}
+th,td{
+	height:50px;
+	border:2px solid black;
+	border-collapse:collapse;
+}
+th{
+	color:greenyellow;
+}
+td{
+	color:aquamarine;
+}
+.logout{
+	margin-top:-100px;
+}
